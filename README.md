@@ -41,3 +41,8 @@ Sistema:
 Node       : v6.10.2
 OS         : Windows 10
 
+
+
+************* fazer testunitario 
+https://codepen.io/anon/pen/aKgEo
+plunk
