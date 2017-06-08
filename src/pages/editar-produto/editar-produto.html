@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Edição</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="fechar()">
+        <ion-icon >Close</ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <input type="text" name="teste"[(ngModel)]="nometeste"></input>
+    <ion-item *ngFor="let result of produtos | async" >
+         <ion-label fxed>Produto:</ion-label>
+               <h1> {{result.descricao}} ></h1>
+
+
+    <!--<ion-item>
+      <ion-label>Descrição</ion-label>dec
+      <ion-input [(ngModel)]="produtos.descricao"> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Quantidade</ion-label>
+      <ion-input [(ngModel)]="produtos.quantidade"> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Email</ion-label>
+      <ion-input [(ngc Model)]="produtos.email"> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Telefone</ion-label>
+      <ion-input [(ngModel)]="produto.telefone"> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Endereço</ion-label>
+      <ion-input [(ngModel)]="produto.endereco"> </ion-input>
+    </ion-item>-->
+
+        <ion-item>
+          <button ion-button (click)="salvar()">Salvar</button>
+        </ion-item>
+    </ion-item>
+  </ion-list>
+</ion-content>

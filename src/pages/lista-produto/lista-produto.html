@@ -1,0 +1,59 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-title> Lista Produtos  </ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>Produto:</ion-label>
+      <ion-input type="text" [(ngModel)]="produto.produto"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Descriçao:</ion-label>
+      <ion-input type="text" [(ngModel)]="produto.descricao"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Quantidade:</ion-label>
+      <ion-input type="text" [(ngModel)]="produto.quantidade"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Email:</ion-label>
+      <ion-input type="text" [(ngModel)]="produto.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Telefone:</ion-label>
+      <ion-input type="text" [(ngModel)]="produto.telefone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Endereço:</ion-label>
+      <ion-input type="text" [(ngModel)]="produto.endereco"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <button ion-button (click)="cadastrar()">Cadastrar</button>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list>
+    <ion-item *ngFor="let produto of lista | async" (click)="editar(produto.$key)">
+
+
+      <h2>{{produto.produto}}</h2>
+      <h3>{{produto.descricao}}</h3>
+      <h2>{{produto.quantidade}}</h2>
+      <h3>{{produto.email}}</h3>
+      <h2>{{produto.telefone}}</h2>
+      <h3>{{produto.endereco}}</h3>
+
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>
